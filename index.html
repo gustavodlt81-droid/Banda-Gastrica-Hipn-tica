@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0a0a0a" />
+<meta name="description" content="Banda Gástrica Hipnótica — protocolo clínico de 5 sesiones para perder peso sin dietas, sin pastillas, sin cirugía. Pierde peso y gana confianza." />
+<title>Banda Gástrica Hipnótica — Hipnosis Para Perder Peso</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { display: ["Outfit","Manrope","sans-serif"], sans: ["Manrope","ui-sans-serif"] } } }
+  };
+</script>
+
+<style>
+  :root{
+    --p-ink:#0a0a0a; --p-gold:#B8963E; --p-gold-soft:#D4AA5A;
+    --p-cream:#F9F7F2; --p-text:#333333; --p-text-soft:#6B6B6B;
+  }
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--p-text);background:#fff;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4,h5,h6,.font-display{font-family:'Outfit','Manrope',sans-serif;letter-spacing:-0.02em;color:var(--p-ink);}
+  .text-balance{text-wrap:balance;}
+  .text-gold{color:var(--p-gold);}
+  .text-gold-soft{color:var(--p-gold-soft);}
+
+  .breathe-gradient{
+    background:
+      radial-gradient(60% 50% at 20% 10%, rgba(184,150,62,0.10), transparent 60%),
+      radial-gradient(50% 40% at 80% 20%, rgba(212,170,90,0.18), transparent 60%),
+      radial-gradient(70% 60% at 50% 100%, rgba(0,0,0,0.04), transparent 70%),
+      #F9F7F2;
+  }
+  .glass-header{
+    background:rgba(249,247,242,.78);
+    backdrop-filter:saturate(180%) blur(20px);
+    -webkit-backdrop-filter:saturate(180%) blur(20px);
+    border-bottom:1px solid rgba(0,0,0,0.06);
+  }
+  .soft-card{
+    background:#fff;border:1px solid rgba(184,150,62,0.18);
+    box-shadow:0 8px 30px rgba(0,0,0,0.04);border-radius:1.25rem;
+  }
+  .kpi-tile{
+    background:linear-gradient(180deg,#fff 0%,#F9F7F2 100%);
+    border:1px solid rgba(184,150,62,0.2);
+    box-shadow:0 4px 16px rgba(0,0,0,0.03);border-radius:1rem;
+  }
+  .stat-tile{transition:transform .4s ease,box-shadow .4s ease,border-color .4s ease;}
+  .stat-tile:hover{transform:translateY(-6px);box-shadow:0 24px 50px -20px rgba(184,150,62,.35);border-color:rgba(184,150,62,.45);}
+  .stat-tile:hover .stat-icon{animation:stat-bounce .9s ease-in-out infinite;}
+  @keyframes stat-bounce{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(-3deg)}}
+
+  .price-card{
+    position:relative;background:#fff;border:1px solid rgba(184,150,62,0.28);
+    box-shadow:0 30px 80px -20px rgba(184,150,62,0.22),0 8px 30px -10px rgba(0,0,0,0.10);
+    border-radius:1.5rem;overflow:hidden;
+  }
+  .price-card::before{
+    content:"";position:absolute;inset:-1px;border-radius:1.5rem;
+    background:linear-gradient(135deg,rgba(0,0,0,0.55),rgba(184,150,62,0.45),rgba(0,0,0,0.45));
+    z-index:-1;filter:blur(14px);opacity:.55;
+  }
+  .pill{
+    display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .85rem;
+    border-radius:999px;background:rgba(184,150,62,.10);color:var(--p-gold);
+    font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;
+  }
+  .cta-emerald{
+    background:linear-gradient(135deg,#000 0%,#1a1a1a 45%,#B8963E 100%);
+    color:#fff;border-radius:999px;padding:1rem 1.6rem;font-weight:600;
+    display:inline-flex;align-items:center;gap:.6rem;
+    box-shadow:0 12px 30px -10px rgba(0,0,0,.45);
+    transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;
+    border:none;cursor:pointer;font-family:'Outfit',sans-serif;text-decoration:none;
+  }
+  .cta-emerald:hover{transform:translateY(-2px);box-shadow:0 18px 40px -10px rgba(184,150,62,.55);filter:brightness(1.04);}
+
+  @keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.04);opacity:.92}}
+  .animate-breathe{animation:breathe 4.5s ease-in-out infinite;}
+  @keyframes float-soft{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .animate-float{animation:float-soft 6s ease-in-out infinite;}
+  @keyframes float-card{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .animate-float-card{animation:float-card 7s ease-in-out infinite;}
+  @keyframes glow-pulse{0%,100%{box-shadow:0 0 0 0 rgba(184,150,62,0)}50%{box-shadow:0 0 0 12px rgba(184,150,62,.12)}}
+  .animate-glow-pulse{animation:glow-pulse 3.5s ease-in-out infinite;}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+
+  @keyframes wave-flow-1{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+  @keyframes wave-flow-2{0%{transform:translate3d(-25%,0,0)}100%{transform:translate3d(-75%,0,0)}}
+  .wave-layer{position:absolute;left:0;width:200%;height:100%;pointer-events:none;}
+  .wave-1{animation:wave-flow-1 22s linear infinite;opacity:.85;}
+  .wave-2{animation:wave-flow-2 32s linear infinite;opacity:.7;}
+  .wave-3{animation:wave-flow-1 44s linear infinite;opacity:.55;}
+
+  .method-card{transition:all .5s ease;}
+  .method-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -15px rgba(0,0,0,.2);border-color:rgba(184,150,62,.4);}
+  .method-card:hover .method-icon{background:var(--p-gold);color:#fff;transform:scale(1.1) rotate(6deg);}
+  .method-icon{transition:all .5s ease;}
+  .lift-card{transition:transform .3s ease;}
+  .lift-card:hover{transform:translateY(-4px);}
+
+  .acc-item{border-bottom:1px solid rgba(184,150,62,.22);}
+  .acc-trigger{display:flex;justify-content:space-between;align-items:center;width:100%;padding:1.5rem 0;text-align:left;background:none;border:none;font-size:1.05rem;font-weight:600;color:var(--p-ink);cursor:pointer;font-family:'Outfit',sans-serif;}
+  .acc-trigger .chev{transition:transform .25s ease;color:#9CA3AF;}
+  .acc-item.open .acc-trigger .chev{transform:rotate(180deg);}
+  .acc-content{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease;color:var(--p-text-soft);line-height:1.7;}
+  .acc-item.open .acc-content{max-height:700px;padding-bottom:1.5rem;}
+</style>
+</head>
+<body>
+
+<!-- ============== HEADER ============== -->
+<header id="bgh-header" class="fixed top-0 left-0 right-0 z-50 transition-all">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="https://customer-assets.emergentagent.com/job_breathe-free-reset/artifacts/00gev1ft_ChatGPT%20Image%2020%20jun%202026%2C%2015_44_42.png" alt="Hipnosis Para Perder Peso" class="h-32 md:h-40 w-auto object-contain -my-10">
+    </a>
+    <a href="#precio" class="cta-emerald !py-2.5 !px-5 text-sm">Empezar ahora <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== HERO ============== -->
+<section id="top" class="relative pt-28 md:pt-36 pb-20 md:pb-28 breathe-gradient overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <svg class="wave-layer wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none" style="top:auto;bottom:-20px;height:240px">
+      <path d="M0,160 C240,210 480,80 720,140 C960,200 1200,120 1440,170 L1440,320 L0,320 Z M1440,160 C1680,210 1920,80 2160,140 C2400,200 2640,120 2880,170 L2880,320 L1440,320 Z" fill="rgba(184,150,62,0.22)"/>
+    </svg>
+    <svg class="wave-layer wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none" style="top:auto;bottom:-40px;height:280px">
+      <path d="M0,180 C320,120 600,240 960,180 C1200,140 1320,210 1440,180 L1440,320 L0,320 Z M1440,180 C1760,120 2040,240 2400,180 C2640,140 2760,210 2880,180 L2880,320 L1440,320 Z" fill="rgba(212,170,90,0.40)"/>
+    </svg>
+    <svg class="wave-layer wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none" style="top:auto;bottom:0;height:260px">
+      <path d="M0,140 C260,90 540,200 800,150 C1060,100 1240,180 1440,140 L1440,320 L0,320 Z M1440,140 C1700,90 1980,200 2240,150 C2500,100 2680,180 2880,140 L2880,320 L1440,320 Z" fill="rgba(0,0,0,0.18)"/>
+    </svg>
+  </div>
+  <div class="reveal max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-12 items-center relative">
+    <div class="lg:col-span-6">
+      <div class="pill mb-6"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Protocolo de Hipnosis Clínica</div>
+      <h1 class="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.4rem] leading-[1.1] tracking-tight text-balance" style="color:#0a0a0a">
+        Pierde peso y gana <span class="text-gold">confianza</span>, sin volverte a privar de nada.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl leading-relaxed max-w-xl" style="color:#6B6B6B">
+        La Banda Gástrica Hipnótica es un protocolo de hipnosis clínica profunda que le enseña a tu mente a sentirse satisfecha con menos, sin cirugía, sin pastillas, sin contar calorías.
+      </p>
+      <div class="mt-10">
+        <a href="#precio" class="cta-emerald">Quiero alcanzar mi peso ideal <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="mt-6 flex items-center gap-6 text-sm flex-wrap" style="color:#6B6B6B">
+        <div class="flex items-center gap-2"><i data-lucide="badge-check" class="w-4 h-4 text-gold"></i> Acceso inmediato</div>
+        <div class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-gold"></i> Garantía de 7 días</div>
+        <div class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4 text-gold"></i> Pago seguro vía Hotmart</div>
+      </div>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="relative rounded-3xl overflow-hidden soft-card !p-2 animate-float">
+        <video id="bgh-vsl" src="https://customer-assets.emergentagent.com/job_breathe-free-reset/artifacts/69fc88qq_me_puedes_hacer_un_video_corto.mp4"
+               class="w-full aspect-video rounded-2xl object-cover bg-slate-100" playsinline autoplay muted loop preload="auto"></video>
+        <button id="bgh-vsl-unmute" class="absolute inset-0 flex items-center justify-center group" aria-label="Activar sonido">
+          <span class="absolute inset-0 bg-gradient-to-br from-black/10 to-black/30 rounded-2xl"></span>
+          <span class="relative flex flex-col items-center gap-3">
+            <span class="w-20 h-20 rounded-full bg-white/95 shadow-2xl flex items-center justify-center group-hover:scale-105 transition animate-breathe">
+              <i data-lucide="volume-2" class="w-8 h-8" style="color:#0a0a0a"></i>
+            </span>
+            <span class="px-4 py-1.5 rounded-full bg-white/95 text-sm font-semibold shadow-lg" style="color:#0a0a0a">Activar sonido</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== STATS ============== -->
+<section class="py-20 md:py-28" style="background:#F9F7F2">
+  <div class="reveal max-w-7xl mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5" id="bgh-stats"></div>
+  </div>
+</section>
+
+<!-- ============== PROBLEM ============== -->
+<section class="py-24 md:py-32 bg-white relative overflow-hidden">
+  <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full pointer-events-none" style="background:radial-gradient(circle, rgba(184,150,62,0.10), transparent 70%)"></div>
+  <div class="reveal max-w-6xl mx-auto px-6 md:px-12 relative">
+    <div class="max-w-3xl">
+      <div class="pill mb-5">Por qué todo lo que intentaste antes no funcionó</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-balance" style="color:#0a0a0a">
+        Si estás aquí, ya sabes <span class="text-gold">cómo es esto.</span>
+      </h2>
+    </div>
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4" id="bgh-intentos"></div>
+    <div class="mt-14 grid lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-7 space-y-5 text-lg leading-relaxed" style="color:#333333">
+        <p>Has hecho la dieta. Quizás más de una.</p>
+        <p>Y funcionó… un tiempo. Hasta que un día apareció el cansancio, la ansiedad, una situación difícil, y volviste al punto de partida. O peor.</p>
+        <p style="color:#0a0a0a;font-weight:600">Y entonces llegó la voz.</p>
+      </div>
+      <div class="lg:col-span-5">
+        <blockquote class="p-8 md:p-10 rounded-2xl relative" style="background:#0a0a0a">
+          <i data-lucide="quote" class="w-9 h-9 absolute top-6 right-6" style="color:#B8963E;opacity:.5"></i>
+          <p class="italic text-2xl md:text-3xl leading-snug font-display" style="color:#F9F7F2">“¿Para qué lo intento si siempre termino igual?”</p>
+        </blockquote>
+      </div>
+    </div>
+    <div class="mt-14 grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4 leading-relaxed" style="color:#333333">
+        <p>El problema nunca fue tu disciplina. Tu cerebro tiene asociaciones profundas con la comida: el alivio después de un día duro, el premio por un logro, el refugio cuando algo duele.</p>
+        <p>Las dietas atacan <em>lo que comes</em>. No tocan <em>lo que sientes</em> cuando comes.</p>
+      </div>
+      <div class="p-8 rounded-2xl text-center md:text-left" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 60%,#2a2a2a 100%)">
+        <i data-lucide="sparkles" class="w-7 h-7 mb-4 inline-block md:block" style="color:#D4AA5A"></i>
+        <p class="font-display text-xl md:text-2xl leading-snug" style="color:#F9F7F2">
+          La Banda Gástrica Hipnótica no pelea contra tu mente.
+          <span style="color:#D4AA5A">La reprograma.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MECHANISM ============== -->
+<section id="metodo" class="py-24 md:py-32" style="background:#F9F7F2">
+  <div class="reveal max-w-6xl mx-auto px-6 md:px-12">
+    <div class="text-center max-w-3xl mx-auto">
+      <div class="pill mb-5 mx-auto">Por qué esto es diferente</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-balance" style="color:#0a0a0a">
+        El problema no es tu estómago, <span class="text-gold">es la señal que tu mente le envía.</span>
+      </h2>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-5">
+      <div class="soft-card p-6 md:p-7">
+        <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="stethoscope" class="w-5 h-5"></i></div>
+        <h3 class="mt-4 text-lg font-semibold font-display" style="color:#0a0a0a">Banda quirúrgica</h3>
+        <p class="mt-2 text-sm leading-relaxed" style="color:#6B6B6B">Reduce físicamente tu estómago. Funciona, pero requiere cirugía, anestesia, recuperación y riesgos.</p>
+      </div>
+      <div class="soft-card p-6 md:p-7" style="border:1px solid rgba(184,150,62,0.35)">
+        <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="brain" class="w-5 h-5"></i></div>
+        <h3 class="mt-4 text-lg font-semibold font-display" style="color:#0a0a0a">Banda Hipnótica</h3>
+        <p class="mt-2 text-sm leading-relaxed" style="color:#6B6B6B">La hipnosis clínica instala en tu subconsciente la percepción de saciedad reducida. Mismo efecto, sin tocar tu cuerpo.</p>
+      </div>
+      <div class="soft-card p-6 md:p-7">
+        <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="sparkles" class="w-5 h-5"></i></div>
+        <h3 class="mt-4 text-lg font-semibold font-display" style="color:#0a0a0a">Resultado</h3>
+        <p class="mt-2 text-sm leading-relaxed" style="color:#6B6B6B">La señal de saciedad aparece antes, naturalmente. No estás resistiendo la comida, simplemente ya no quieres tanto.</p>
+      </div>
+    </div>
+    <p class="mt-12 max-w-3xl mx-auto text-center font-display text-xl md:text-2xl leading-snug" style="color:#0a0a0a">
+      No es autosugestión superficial. No es meditación.<br>
+      <span class="text-gold">Es una intervención clínica estructurada en 5 sesiones progresivas.</span>
+    </p>
+    <div class="mt-16 grid md:grid-cols-2 gap-6">
+      <div class="soft-card p-7 md:p-8">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(107,107,107,.08);color:#6B6B6B"><i data-lucide="alert-triangle" class="w-5 h-5"></i></div>
+          <h3 class="text-xl font-semibold font-display" style="color:#6B6B6B">Lo que ya probaste</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#6B6B6B"><i data-lucide="x-circle" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#9CA3AF"></i><span>Dietas y restricciones: atacan el síntoma, no el patrón mental</span></li>
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#6B6B6B"><i data-lucide="x-circle" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#9CA3AF"></i><span>Apps y conteo de calorías: información sin cambio neurológico real</span></li>
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#6B6B6B"><i data-lucide="x-circle" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#9CA3AF"></i><span>Pastillas y suplementos: efectos temporales, sin reprogramación real</span></li>
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#6B6B6B"><i data-lucide="x-circle" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#9CA3AF"></i><span>Una sola sesión de hipnosis, no es lo mismo que un protocolo clínico progresivo</span></li>
+        </ul>
+      </div>
+      <div class="soft-card p-7 md:p-8 relative" style="border:1px solid rgba(184,150,62,0.35);box-shadow:0 20px 50px -20px rgba(184,150,62,.35)">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="sparkles" class="w-5 h-5"></i></div>
+          <h3 class="text-xl font-semibold font-display" style="color:#0a0a0a">Banda Gástrica Hipnótica</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#333333"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>5 sesiones de hipnosis profunda, una por semana, diseñadas en progresión clínica</span></li>
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#333333"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Instala la percepción de saciedad antes, sin cirugía, sin riesgo</span></li>
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#333333"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Reprograma la relación emocional con la comida desde el subconsciente</span></li>
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#333333"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Audio de auto-hipnosis diario para consolidar el cambio día a día</span></li>
+          <li class="flex items-start gap-3 text-sm leading-relaxed" style="color:#333333"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Sin alimentos prohibidos. Sin contar calorías. Sin morirse de hambre.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROGRAM ============== -->
+<section class="py-24 md:py-32 bg-white">
+  <div class="reveal max-w-7xl mx-auto px-6 md:px-12">
+    <div class="max-w-3xl">
+      <div class="pill mb-5">Todo lo que incluye</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-balance" style="color:#0a0a0a">
+        Tuyo desde el momento <span class="text-gold">en que te registras.</span>
+      </h2>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <div class="soft-card p-7 md:p-8 method-card relative">
+        <div class="absolute top-7 right-7 text-4xl font-semibold font-display" style="color:rgba(184,150,62,.25)">01</div>
+        <div class="method-icon w-12 h-12 rounded-xl flex items-center justify-center animate-glow-pulse" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="headphones" class="w-6 h-6"></i></div>
+        <h3 class="mt-6 text-xl font-semibold font-display" style="color:#0a0a0a">5 Sesiones de Hipnosis Clínica Profunda</h3>
+        <p class="mt-3 leading-relaxed" style="color:#6B6B6B">Una por semana. Cada sesión construye sobre la anterior. No son audios genéricos de relajación, son intervenciones terapéuticas estructuradas para transformar tu relación con la comida desde el subconsciente.</p>
+      </div>
+      <div class="soft-card p-7 md:p-8 method-card relative">
+        <div class="absolute top-7 right-7 text-4xl font-semibold font-display" style="color:rgba(184,150,62,.25)">02</div>
+        <div class="method-icon w-12 h-12 rounded-xl flex items-center justify-center animate-glow-pulse" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="moon" class="w-6 h-6"></i></div>
+        <h3 class="mt-6 text-xl font-semibold font-display" style="color:#0a0a0a">Audio de Auto-hipnosis Diario</h3>
+        <p class="mt-3 leading-relaxed" style="color:#6B6B6B">El ancla de todo el proceso. Escúchalo cada día, preferiblemente antes de dormir. Es lo que convierte la sesión semanal en un cambio permanente.</p>
+      </div>
+      <div class="soft-card p-7 md:p-8 method-card relative">
+        <div class="absolute top-7 right-7 text-4xl font-semibold font-display" style="color:rgba(184,150,62,.25)">03</div>
+        <div class="method-icon w-12 h-12 rounded-xl flex items-center justify-center animate-glow-pulse" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="line-chart" class="w-6 h-6"></i></div>
+        <h3 class="mt-6 text-xl font-semibold font-display" style="color:#0a0a0a">Track de Hábitos Diario</h3>
+        <p class="mt-3 leading-relaxed" style="color:#6B6B6B">Un seguimiento visual de los hábitos clave del programa. No para controlarte, para que veas en tiempo real cómo te estás convirtiendo en la persona que quieres ser.</p>
+      </div>
+    </div>
+    <div class="mt-16 pt-10 border-t" style="border-color:rgba(184,150,62,.18)">
+      <div class="flex items-center gap-3 mb-8">
+        <i data-lucide="gift" class="w-6 h-6 text-gold"></i>
+        <h3 class="text-2xl md:text-3xl font-semibold font-display" style="color:#0a0a0a">Y además, <span class="text-gold">3 bonus exclusivos</span></h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="soft-card p-7 md:p-8 lift-card" style="background:#F9F7F2">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(184,150,62,.18);color:#B8963E"><i data-lucide="book-open" class="w-6 h-6"></i></div>
+          <h4 class="mt-5 text-base font-semibold leading-snug font-display" style="color:#0a0a0a">BONUS 1: Cuadernillo de Trabajo, Tu Ruta de Transformación</h4>
+          <p class="mt-3 text-sm leading-relaxed" style="color:#6B6B6B">Ejercicios y reflexiones para integrar el cambio mental más allá de las sesiones.</p>
+        </div>
+        <div class="soft-card p-7 md:p-8 lift-card" style="background:#F9F7F2">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(184,150,62,.18);color:#B8963E"><i data-lucide="scroll-text" class="w-6 h-6"></i></div>
+          <h4 class="mt-5 text-base font-semibold leading-snug font-display" style="color:#0a0a0a">BONUS 2: Guía de Frases de Poder, 35 Declaraciones Diarias</h4>
+          <p class="mt-3 text-sm leading-relaxed" style="color:#6B6B6B">Declaraciones identitarias diseñadas para conectarte cada día con la versión de ti que ya alcanzó su peso ideal.</p>
+        </div>
+        <div class="soft-card p-7 md:p-8 lift-card" style="background:#F9F7F2">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(184,150,62,.18);color:#B8963E"><i data-lucide="heart-handshake" class="w-6 h-6"></i></div>
+          <h4 class="mt-5 text-base font-semibold leading-snug font-display" style="color:#0a0a0a">BONUS 3: Audio de Control del Estrés y la Ansiedad</h4>
+          <p class="mt-3 text-sm leading-relaxed" style="color:#6B6B6B">Para los días difíciles. No para aguantar la ansiedad, para disolverla en el momento en que aparece.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section class="py-24 md:py-32" style="background:#F9F7F2">
+  <div class="reveal max-w-7xl mx-auto px-6 md:px-12">
+    <div class="max-w-3xl">
+      <div class="pill mb-5">Así funciona</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-balance" style="color:#0a0a0a">
+        Simple. Sin complicaciones. <span class="text-gold">Sin adivinar qué hacer.</span>
+      </h2>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <div class="soft-card p-8 md:p-10 method-card animate-float-card" style="animation-delay:0s">
+        <div class="method-icon w-12 h-12 rounded-xl flex items-center justify-center animate-glow-pulse" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="headphones" class="w-6 h-6"></i></div>
+        <div class="mt-5 flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-gold"><span>25-35 min</span><span class="opacity-30">·</span><span>1×/semana</span></div>
+        <h3 class="mt-2 text-xl font-semibold font-display" style="color:#0a0a0a">Cada semana, una sesión</h3>
+        <p class="mt-3 leading-relaxed" style="color:#6B6B6B">Acomódate, usa audífonos, acuéstate. Deja que la sesión haga su trabajo.</p>
+      </div>
+      <div class="soft-card p-8 md:p-10 method-card animate-float-card" style="animation-delay:1.2s">
+        <div class="method-icon w-12 h-12 rounded-xl flex items-center justify-center animate-glow-pulse" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="moon" class="w-6 h-6"></i></div>
+        <div class="mt-5 flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-gold"><span>20-25 min</span><span class="opacity-30">·</span><span>Diario</span></div>
+        <h3 class="mt-2 text-xl font-semibold font-display" style="color:#0a0a0a">Cada día, el audio de auto-hipnosis</h3>
+        <p class="mt-3 leading-relaxed" style="color:#6B6B6B">Antes de dormir. Ancla el cambio de la sesión en tu subconsciente durante los 7 días siguientes.</p>
+      </div>
+      <div class="soft-card p-8 md:p-10 method-card animate-float-card" style="animation-delay:2.4s">
+        <div class="method-icon w-12 h-12 rounded-xl flex items-center justify-center animate-glow-pulse" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="list-checks" class="w-6 h-6"></i></div>
+        <div class="mt-5 flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-gold"><span>60 seg</span><span class="opacity-30">·</span><span>Diario</span></div>
+        <h3 class="mt-2 text-xl font-semibold font-display" style="color:#0a0a0a">Cada día, el track de hábitos</h3>
+        <p class="mt-3 leading-relaxed" style="color:#6B6B6B">60 segundos. Marca lo que hiciste. Sirve para ver tu cambio en tiempo real.</p>
+      </div>
+    </div>
+    <p class="mt-12 max-w-3xl text-center mx-auto text-lg leading-relaxed" style="color:#333333">
+      Eso es todo. No hay menú que seguir. No hay alimentos prohibidos. No hay horarios rígidos.
+      <span style="color:#0a0a0a;font-weight:600">El protocolo se adapta a tu vida, no al revés.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============== TESTIMONIALS ============== -->
+<section class="py-24 md:py-32 bg-white">
+  <div class="reveal max-w-7xl mx-auto px-6 md:px-12">
+    <div class="flex items-end justify-between flex-wrap gap-6">
+      <div class="max-w-2xl">
+        <div class="pill mb-5">Lo que dicen quienes ya lo vivieron</div>
+        <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight" style="color:#0a0a0a">
+          Personas reales. <span class="text-gold">Resultados que no esperaban.</span>
+        </h2>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="bgh-test-prev" class="w-11 h-11 rounded-full border flex items-center justify-center transition" style="border-color:rgba(184,150,62,.3);color:#6B6B6B" aria-label="Anterior"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+        <button id="bgh-test-next" class="w-11 h-11 rounded-full border flex items-center justify-center transition" style="border-color:rgba(184,150,62,.3);color:#6B6B6B" aria-label="Siguiente"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+      </div>
+    </div>
+    <div id="bgh-test-grid" class="mt-14 grid lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ============== KPI ============== -->
+<section class="py-24 md:py-32 relative overflow-hidden" style="background:#0a0a0a">
+  <div class="absolute inset-0 opacity-40 pointer-events-none" style="background:radial-gradient(50% 40% at 80% 20%,rgba(184,150,62,.40),transparent 60%),radial-gradient(40% 35% at 20% 80%,rgba(212,170,90,.25),transparent 60%)"></div>
+  <div class="reveal max-w-7xl mx-auto px-6 md:px-12 relative">
+    <div class="max-w-3xl">
+      <div class="pill mb-5" style="background:rgba(255,255,255,.10);color:#D4AA5A">Métricas</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-balance" style="color:#F9F7F2">
+        Números que respaldan el <span style="color:#D4AA5A">método</span>.
+      </h2>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="rounded-2xl p-8 md:p-10 backdrop-blur-sm" style="background:rgba(255,255,255,0.05);border:1px solid rgba(184,150,62,.18)">
+        <div class="font-display text-5xl md:text-6xl font-semibold" style="color:#F9F7F2">+<span class="bgh-counter" data-to="900"></span></div>
+        <div class="mt-3 text-base" style="color:rgba(249,247,242,.7)">Personas transformadas</div>
+      </div>
+      <div class="rounded-2xl p-8 md:p-10 backdrop-blur-sm" style="background:rgba(255,255,255,0.05);border:1px solid rgba(184,150,62,.18)">
+        <div class="font-display text-5xl md:text-6xl font-semibold" style="color:#F9F7F2">+<span class="bgh-counter" data-to="98"></span>%</div>
+        <div class="mt-3 text-base" style="color:rgba(249,247,242,.7)">Finalizan el programa</div>
+      </div>
+      <div class="rounded-2xl p-8 md:p-10 backdrop-blur-sm" style="background:rgba(255,255,255,0.05);border:1px solid rgba(184,150,62,.18)">
+        <div class="font-display text-5xl md:text-6xl font-semibold" style="color:#F9F7F2">+<span class="bgh-counter" data-to="6500"></span> Kg</div>
+        <div class="mt-3 text-base" style="color:rgba(249,247,242,.7)">Perdidos en total</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== THERAPIST ============== -->
+<section class="py-24 md:py-32 bg-white">
+  <div class="reveal max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-5">
+      <div class="relative">
+        <img src="https://customer-assets.emergentagent.com/job_breathe-free-reset/artifacts/9ie0tcp6_PHOTO-2026-05-14-01-48-33.jpg" alt="Gustavo De La Torre" class="rounded-3xl w-full object-cover aspect-[4/5] shadow-xl">
+        <div class="absolute -bottom-6 -right-6 soft-card !p-5 !rounded-2xl hidden md:block" style="background:#fff">
+          <div class="flex items-center gap-3">
+            <i data-lucide="award" class="w-5 h-5 text-gold"></i>
+            <div class="text-sm">
+              <div class="font-semibold" style="color:#0a0a0a">+10 años</div>
+              <div style="color:#6B6B6B">como hipnoterapeuta clínico</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-7">
+      <div class="pill mb-5">Quién está detrás</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight leading-[1.05]" style="color:#0a0a0a">
+        <span class="block text-base md:text-lg font-semibold tracking-[0.2em] uppercase mb-3" style="color:#0a0a0a">Yo Soy</span>
+        <span class="text-gold">Gustavo De La Torre</span>
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed" style="color:#333333">Hipnoterapeuta clínico.</p>
+      <p class="mt-4 leading-relaxed" style="color:#6B6B6B">Llevo años trabajando con personas que quieren cambiar patrones de conducta profundos, no con técnicas de motivación sino con intervención directa en el subconsciente.</p>
+      <p class="mt-4 leading-relaxed" style="color:#6B6B6B">Este protocolo nació de ese trabajo clínico. Es el mismo protocolo que aplico en consulta, adaptado para que puedas hacerlo desde donde estás, en 5 semanas, sin necesitar saber nada sobre hipnosis.</p>
+      <p class="mt-4 leading-relaxed" style="color:#6B6B6B">Si estás aquí es porque los métodos que trabajan en la superficie ya no te convencen. Yo tampoco creo en ellos.</p>
+      <div class="mt-8 space-y-3 pt-6" style="border-top:1px solid rgba(184,150,62,.22)">
+        <div class="flex items-start gap-3 text-xs leading-relaxed" style="color:#6B6B6B"><i data-lucide="badge-check" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Certified Hypnotist N° 60774 — National Guild of Hypnotists, USA</span></div>
+        <div class="flex items-start gap-3 text-xs leading-relaxed" style="color:#6B6B6B"><i data-lucide="badge-check" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Master en Hipnosis Clínica MHC 2991 — Academia Internacional de Hipnosis Clínica y Experimental, España</span></div>
+        <div class="flex items-start gap-3 text-xs leading-relaxed" style="color:#6B6B6B"><i data-lucide="badge-check" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Terapeuta Autorizado Banda Gástrica Virtual N° CH214 — Instituto Scharovsky, Argentina</span></div>
+        <div class="flex items-start gap-3 text-xs leading-relaxed" style="color:#6B6B6B"><i data-lucide="badge-check" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Master en Hipnosis Clásica y Ericksoniana — Instituto de Hipnosis Chile, Chile</span></div>
+        <div class="flex items-start gap-3 text-xs leading-relaxed" style="color:#6B6B6B"><i data-lucide="badge-check" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold"></i><span>Asociación Chilena de Hipnosis Terapéutica N° 00082 — Chile</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRICING ============== -->
+<section id="precio" class="py-24 md:py-32" style="background:#F9F7F2">
+  <div class="reveal max-w-5xl mx-auto px-6 md:px-12">
+    <div class="text-center max-w-2xl mx-auto">
+      <div class="pill mb-5 mx-auto">Precio · Oferta de Lanzamiento</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-balance" style="color:#0a0a0a">
+        Una decisión. <span class="text-gold">El resto de tu vida.</span>
+      </h2>
+      <p class="mt-5 text-lg" style="color:#6B6B6B">Acceso inmediato, sin suscripciones, sin sorpresas.</p>
+    </div>
+    <div class="mt-14 price-card p-8 md:p-12 grid md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-7">
+        <h3 class="font-display text-2xl md:text-3xl font-semibold" style="color:#0a0a0a">Hipnosis para Perder Peso, Banda Gástrica Hipnótica</h3>
+        <p class="mt-2" style="color:#6B6B6B">Todo el protocolo clínico, sin cirugía, sin dietas, sin pastillas.</p>
+        <ul class="mt-6 space-y-3 text-sm md:text-base">
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>5 sesiones de hipnosis clínica profunda (una por semana)</span></li>
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>Audio de auto-hipnosis diario para anclar el cambio</span></li>
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>Track de hábitos diario para integrar el cambio</span></li>
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>Bonus 1: Cuadernillo de Trabajo, Tu Ruta de Transformación</span></li>
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>Bonus 2: Guía de Frases de Poder, 35 Declaraciones</span></li>
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>Bonus 3: Audio de Control del Estrés y la Ansiedad</span></li>
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>Acceso de por vida · actualizaciones gratis</span></li>
+          <li class="flex items-start gap-3" style="color:#333333"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold flex-shrink-0 mt-0.5"></i><span>Garantía de 7 días sin preguntas, devolvemos el 100%</span></li>
+        </ul>
+      </div>
+      <div class="md:col-span-5">
+        <div class="rounded-2xl p-7 border" style="background:linear-gradient(180deg,rgba(184,150,62,0.08) 0%,#fff 100%);border-color:rgba(184,150,62,.25)">
+          <div class="text-sm line-through" style="color:#9CA3AF">Valor del protocolo completo: $697 USD</div>
+          <div class="mt-2 flex items-baseline gap-2">
+            <span class="font-display text-6xl font-semibold" style="color:#0a0a0a">$57</span>
+            <span class="font-medium text-sm" style="color:#6B6B6B">USD · pago único</span>
+          </div>
+          <div class="mt-1 text-xs uppercase tracking-widest font-semibold text-gold">Acceso de por vida</div>
+          <a href="https://pay.hotmart.com/BANDA-GASTRICA-HIPNOTICA" target="_blank" rel="noopener noreferrer" class="cta-emerald w-full justify-center mt-6 !py-4 text-base">
+            Quiero alcanzar mi peso ideal <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+          <div class="mt-5 grid gap-2 text-sm" style="color:#6B6B6B">
+            <div class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-gold"></i> Garantía de 7 días o devolución</div>
+            <div class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4 text-gold"></i> Pago 100% seguro vía Hotmart</div>
+            <div class="flex items-center gap-2"><i data-lucide="badge-check" class="w-4 h-4 text-gold"></i> Acceso inmediato tras la compra</div>
+          </div>
+          <p class="mt-5 text-center italic font-display" style="color:#0a0a0a">Tu único riesgo real es no intentarlo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section id="faq" class="py-24 md:py-32 bg-white">
+  <div class="reveal max-w-3xl mx-auto px-6 md:px-12">
+    <div class="text-center">
+      <div class="pill mb-5 mx-auto">Preguntas frecuentes</div>
+      <h2 class="font-display font-semibold text-3xl md:text-5xl tracking-tight text-balance" style="color:#0a0a0a">
+        Todo lo que quieres saber <span class="text-gold">antes de empezar.</span>
+      </h2>
+    </div>
+    <div id="bgh-faq" class="mt-12"></div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="py-24 md:py-36 relative overflow-hidden" style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 55%,#2a2a2a 100%)">
+  <div class="absolute inset-0 opacity-40 pointer-events-none" style="background:radial-gradient(50% 40% at 80% 20%,rgba(184,150,62,.55),transparent 60%),radial-gradient(40% 35% at 20% 80%,rgba(212,170,90,.25),transparent 60%)"></div>
+  <div class="reveal max-w-4xl mx-auto px-6 md:px-12 text-center relative">
+    <div class="pill mb-6 mx-auto" style="background:rgba(255,255,255,.10);color:#D4AA5A">La decisión</div>
+    <h2 class="font-display font-semibold text-3xl md:text-5xl lg:text-6xl tracking-tight text-balance" style="color:#F9F7F2">
+      La pregunta no es si funciona.<br>
+      <span style="color:#D4AA5A">Es si vas a intentarlo.</span>
+    </h2>
+    <div class="mt-8 space-y-4 max-w-2xl mx-auto text-lg leading-relaxed" style="color:rgba(249,247,242,.85)">
+      <p>Esa duda la tiene casi todo el mundo que llega aquí. La misma que tuvo quien llevaba años haciendo dieta sin resultado, y terminó el protocolo con una talla menos y sin contar una sola caloría.</p>
+      <p>La diferencia entre esa persona y quien sigue en el mismo lugar no fue la disciplina. Fue decidir probar algo diferente.</p>
+      <p>Tienes 7 días de garantía completa. Si no es para ti, devolvemos cada centavo. Lo único que puedes perder es la oportunidad de que esto sea lo que cambia todo.</p>
+    </div>
+    <a href="https://pay.hotmart.com/BANDA-GASTRICA-HIPNOTICA" target="_blank" rel="noopener noreferrer" class="mt-10 inline-flex cta-emerald !py-4 !px-7 text-base shadow-2xl" style="background:#F9F7F2;color:#0a0a0a">
+      Quiero alcanzar mi peso ideal <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm" style="color:rgba(249,247,242,.85)">
+      <span class="flex items-center gap-2"><i data-lucide="badge-check" class="w-4 h-4"></i> Acceso inmediato</span>
+      <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4"></i> Garantía de 7 días</span>
+      <span class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4"></i> Pago seguro vía Hotmart</span>
+    </div>
+    <p class="mt-14 italic text-xl md:text-2xl max-w-2xl mx-auto font-display" style="color:#D4AA5A">
+      Cada día que pasa es otro día en el mismo lugar.<br>Hoy puede ser diferente.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="py-14 border-t" style="background:#F9F7F2;border-color:rgba(0,0,0,.08)">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+    <img src="https://customer-assets.emergentagent.com/job_breathe-free-reset/artifacts/00gev1ft_ChatGPT%20Image%2020%20jun%202026%2C%2015_44_42.png" alt="Hipnosis Para Perder Peso" class="h-28 md:h-36 w-auto object-contain">
+    <div class="text-xs" style="color:#6B6B6B">© <span id="bgh-year"></span> Hipnosis Para Perder Peso · Banda Gástrica Hipnótica. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+(function(){
+  document.getElementById('bgh-year').textContent = new Date().getFullYear();
+
+  // ----- Stats -----
+  var stats = [
+    {v:"5", label:"Sesiones de hipnosis clínica profunda", icon:"headphones"},
+    {v:"35", label:"Días de transformación activa", icon:"calendar"},
+    {v:"1", label:"Audio de auto-hipnosis diario para fijar la sugestión", icon:"moon"},
+    {v:"3", label:"Bonus para acelerar y sostener tu cambio", icon:"gift"},
+  ];
+  var statsWrap = document.getElementById('bgh-stats');
+  stats.forEach(function(s){
+    var el = document.createElement('div');
+    el.className = 'kpi-tile p-6 md:p-8 stat-tile';
+    el.innerHTML =
+      '<div class="stat-icon w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="'+s.icon+'" class="w-5 h-5"></i></div>'+
+      '<div class="mt-5 font-display text-5xl md:text-6xl font-semibold" style="color:#0a0a0a">'+s.v+'</div>'+
+      '<div class="mt-2 text-sm leading-relaxed" style="color:#6B6B6B">'+s.label+'</div>';
+    statsWrap.appendChild(el);
+  });
+
+  // ----- Intentos previos (problem section) -----
+  var intentos = [
+    {icon:"apple", label:"Dietas restrictivas", text:"Conté calorías, pesé porciones"},
+    {icon:"utensils", label:"Resistir cumpleaños", text:"Decir “no, gracias” en cada reunión"},
+    {icon:"moon", label:"Dormir con hambre", text:"Más noches de las que recuerdo"},
+    {icon:"line-chart", label:"Apps y planes", text:"Métricas que nunca cambiaron nada"},
+  ];
+  var intWrap = document.getElementById('bgh-intentos');
+  intentos.forEach(function(it){
+    var el = document.createElement('div');
+    el.className = 'relative soft-card p-5 md:p-6';
+    el.style.background = '#F9F7F2';
+    el.innerHTML =
+      '<div class="absolute top-4 right-4"><i data-lucide="x-circle" class="w-4 h-4" style="color:#9CA3AF"></i></div>'+
+      '<div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(184,150,62,.10);color:#B8963E"><i data-lucide="'+it.icon+'" class="w-5 h-5"></i></div>'+
+      '<div class="mt-4 font-semibold text-sm" style="color:#0a0a0a">'+it.label+'</div>'+
+      '<div class="text-xs mt-1" style="color:#6B6B6B">'+it.text+'</div>';
+    intWrap.appendChild(el);
+  });
+
+  // ----- Testimonials -----
+  var photos = [
+    "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  ];
+  var testimonials = [
+    {name:"Marcela R.",country:"Colombia",quote:"Llevaba 12 años haciendo la misma dieta de enero. Bajaba 4 o 5 kilos, y para marzo ya los había recuperado todos. Entré al programa sin creer demasiado, pero algo me decía que esto era diferente. En la segunda semana noté que dejaba comida en el plato sin esfuerzo. Al final del protocolo había bajado 7 kilos y sin haberme privado de nada."},
+    {name:"Andrés T.",country:"México",quote:"Yo comía por ansiedad. Lo sabía, pero saberlo no cambiaba nada. Con este protocolo, eso simplemente dejó de pasar. Un día me di cuenta de que ya no lo estaba haciendo. Las sesiones trabajaron algo que ninguna dieta había tocado."},
+    {name:"Patricia V.",country:"Argentina",quote:"Lo que más me sorprendió fue la velocidad. A la tercera sesión ya mi ropa me quedaba diferente. Al final me pesé y había bajado casi 6 kilos. Sin pasar hambre. Sin prohibirme nada. Sin contar absolutamente nada."},
+    {name:"Carolina M.",country:"Chile",quote:"Soy escéptica por naturaleza. La hipnosis me parecía cosa de shows de televisión. Algo cambió en la segunda semana. Dejé de pensar en comida entre comidas. Al mes de terminar el protocolo, llevo 9 kilos menos y no he sentido que me privé de nada."},
+    {name:"Rosa Elena P.",country:"Venezuela",quote:"Tengo 52 años y desde los 35 he estado en guerra con mi peso. Este programa es lo primero en años que me ha dado resultados que se quedan. Cambié la forma en que me relaciono con la comida. Como despacio. Disfruto lo que como. Y me detengo cuando estoy satisfecha."},
+    {name:"Daniel F.",country:"España",quote:"No tuve que reorganizar mi vida para seguir el protocolo. Las sesiones las hacía los domingos en la noche. El audio lo ponía antes de dormir. Eso fue todo. Y en 5 semanas bajé una talla completa."}
+  ].map(function(t,i){t.photo=photos[i];return t;});
+  var idx = 0;
+  var grid = document.getElementById('bgh-test-grid');
+  function renderTestimonials(){
+    grid.innerHTML = '';
+    for (var i=0;i<3;i++){
+      var t = testimonials[(idx+i)%testimonials.length];
+      var card = document.createElement('div');
+      card.className = 'soft-card p-7 md:p-8 flex flex-col';
+      card.style.background = '#F9F7F2';
+      card.innerHTML =
+        '<i data-lucide="quote" class="w-7 h-7" style="color:rgba(184,150,62,.45)"></i>'+
+        '<p class="mt-4 leading-relaxed text-sm" style="color:#333333">“'+t.quote+'”</p>'+
+        '<div class="mt-6 flex items-center gap-1">'+
+          '<i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>'.repeat(5)+
+        '</div>'+
+        '<div class="mt-5 flex items-center gap-3 pt-5" style="border-top:1px solid rgba(184,150,62,.18)">'+
+          '<img src="'+t.photo+'" alt="'+t.name+'" class="w-11 h-11 rounded-full object-cover">'+
+          '<div><div class="font-semibold" style="color:#0a0a0a">'+t.name+'</div>'+
+          '<div class="text-xs font-medium" style="color:#B8963E">'+t.country+'</div></div>'+
+        '</div>';
+      grid.appendChild(card);
+    }
+    if(window.lucide) lucide.createIcons();
+  }
+  document.getElementById('bgh-test-prev').addEventListener('click', function(){idx=(idx-1+testimonials.length)%testimonials.length;renderTestimonials();});
+  document.getElementById('bgh-test-next').addEventListener('click', function(){idx=(idx+1)%testimonials.length;renderTestimonials();});
+  setInterval(function(){idx=(idx+1)%testimonials.length;renderTestimonials();}, 6500);
+  renderTestimonials();
+
+  // ----- FAQ -----
+  var faqs = [
+    {q:"¿Y si nunca he hecho hipnosis y no sé si funciona en mí?",a:"La hipnosis clínica no requiere habilidad especial. Es un estado natural de atención enfocada, el mismo que experimentas cuando te absorbe una película o manejas en piloto automático. El 95% de las personas responden positivamente. Y quienes llegan con más escepticismo suelen ser los que más se sorprenden."},
+    {q:"¿Puedo comer lo que quiera? ¿No hay restricciones?",a:"No hay alimentos prohibidos. El protocolo no te dice qué comer, trabaja para que quieras menos, naturalmente. La saciedad llega antes. Los impulsos emocionales se disuelven."},
+    {q:"¿Cuánto tiempo al día requiere?",a:"La sesión semanal dura entre 25 y 35 minutos. El audio diario, entre 20 y 25 minutos. El track de hábitos, menos de un minuto. El protocolo se integra en tu día, no lo reorganiza."},
+    {q:"¿Y si tengo una recaída o necesito refuerzo?",a:"El acceso es de por vida. Si en algún momento sientes que necesitas volver al protocolo, está ahí. Sin coste adicional, sin preguntas, sin límite de veces."},
+    {q:"¿Es lo mismo que una banda gástrica quirúrgica?",a:"No requiere cirugía, anestesia, recuperación ni riesgo médico. Trabaja instalando en el subconsciente la percepción de saciedad reducida, el mismo efecto, sin intervención física."},
+    {q:"¿Y si ya probé la hipnosis y no me funcionó?",a:"Una sesión suelta no es un protocolo clínico progresivo de 5 semanas. Si la hipnosis no te funcionó antes, es muy probable que no fuera este tipo de hipnosis."}
+  ];
+  var faqWrap = document.getElementById('bgh-faq');
+  faqs.forEach(function(f){
+    var item = document.createElement('div');
+    item.className = 'acc-item';
+    item.innerHTML =
+      '<button class="acc-trigger" type="button"><span>'+f.q+'</span><i data-lucide="chevron-down" class="chev w-5 h-5"></i></button>'+
+      '<div class="acc-content"><div>'+f.a+'</div></div>';
+    faqWrap.appendChild(item);
+  });
+  faqWrap.addEventListener('click', function(e){
+    var trigger = e.target.closest('.acc-trigger');
+    if(!trigger) return;
+    var item = trigger.parentElement;
+    var wasOpen = item.classList.contains('open');
+    Array.prototype.forEach.call(faqWrap.querySelectorAll('.acc-item'), function(x){x.classList.remove('open');});
+    if(!wasOpen) item.classList.add('open');
+  });
+
+  // ----- Reveal on scroll -----
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}});
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // ----- Counters -----
+  function animateCounter(el){
+    var to = parseInt(el.getAttribute('data-to'),10)||0;
+    var dur=1600, start=performance.now();
+    function tick(now){
+      var t=Math.min(1,(now-start)/dur);
+      var eased=1-Math.pow(1-t,3);
+      el.textContent=Math.round(to*eased).toLocaleString('es-ES');
+      if(t<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var ioC = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){animateCounter(e.target);ioC.unobserve(e.target);}});
+  },{threshold:0.4});
+  document.querySelectorAll('.bgh-counter').forEach(function(el){el.textContent='0';ioC.observe(el);});
+
+  // ----- Sticky header glass -----
+  var header = document.getElementById('bgh-header');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY>40) header.classList.add('glass-header'); else header.classList.remove('glass-header');
+  });
+
+  // ----- VSL autoplay + unmute -----
+  var vsl = document.getElementById('bgh-vsl');
+  var unmuteBtn = document.getElementById('bgh-vsl-unmute');
+  if(vsl){
+    vsl.muted = true;
+    vsl.play().catch(function(){});
+  }
+  unmuteBtn.addEventListener('click', function(){
+    if(!vsl) return;
+    vsl.muted = false;
+    vsl.volume = 1;
+    vsl.controls = true;
+    if(vsl.paused) vsl.play().catch(function(){});
+    unmuteBtn.style.display = 'none';
+  });
+
+  // ----- Render lucide icons (after all DOM inserts) -----
+  if(window.lucide) lucide.createIcons();
+})();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
